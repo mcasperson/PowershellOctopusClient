@@ -1,6 +1,6 @@
 param (
     [string]$NuGetApiKey = $env:PowershellGalleryApiKey,
-    [string]$Path = "$(Get-Location)\PowershellRetry"
+    [string]$Path = "$(Get-Location)\PowershellOctopusClient"
 )
 
 # There is no way to exclude files, so move the files were are interested in to a temporary location
