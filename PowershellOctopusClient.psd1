@@ -12,7 +12,7 @@
     RootModule = 'PowershellOctopusClient.psm1'
 
     # Version number of this module.
-    ModuleVersion = '0.0.4'
+    ModuleVersion = '#{Octopus.Release.Number}'
 
     # Supported PSEditions
     # CompatiblePSEditions = @()

@@ -1,7 +1,7 @@
-$PublishParams = @{
-    Path = "$(Get-Location)\PowershellOctopusClient"
-    NuGetApiKey = $env:PowershellGalleryApiKey
-}
+param (
+    [string]$NuGetApiKey = $env:PowershellGalleryApiKey,
+    [string]$Path = "$(Get-Location)\PowershellRetry"
+)
 
 # There is no way to exclude files, so move the files were are interested in to a temporary location
 If (Test-Path PowershellOctopusClient){
@@ -14,7 +14,7 @@ cp PowershellOctopusClient.psm1 PowershellOctopusClient
 cp lib/Octopus.Client.dll PowershellOctopusClient/lib
 
 # Publish the module
-Publish-Module @PublishParams
+Publish-Module -Path $Path -NuGetApiKey $NuGetApiKey -Force
 
 # Clear the temporary files
 Remove-Item -Recurse PowershellOctopusClient
