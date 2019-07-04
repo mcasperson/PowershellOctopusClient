@@ -13,6 +13,7 @@ cp PowershellOctopusClient.psd1 PowershellOctopusClient
 cp PowershellOctopusClient.psm1 PowershellOctopusClient
 cp lib/Octopus.Client.dll PowershellOctopusClient/lib
 cp lib/Nevermore.Contracts.dll PowershellOctopusClient/lib
+cp lib/Newtonsoft.Json.dll PowershellOctopusClient/lib
 
 # Publish the module
 Publish-Module -Path $Path -NuGetApiKey $NuGetApiKey -Force
